@@ -7,6 +7,7 @@ import Main from './pages/Main';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Mapa from './pages/Map';
+import Insert from './pages/Insert'
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -27,6 +28,7 @@ const Routes = () => (
       <Route exact path="/" component={Main} />
       <Route path="/cadastro" component={Register} />
       <Route path="/login" component={Login} />
+      <Route path="/cadastrareventos" component={Insert} />
       <PrivateRoute path="/mapa" component={Mapa} />
       <Route path="*" component={() => <h1>Página não encontrada</h1>} />
     </Switch>
